@@ -1,0 +1,14 @@
+<p *ngIf="login; else elseBlock"  >
+    <!-- login menu -->
+   <app-login-user></app-login-user> 
+</p>
+
+<ng-template #elseBlock>
+
+<app-head-bar [headName] = "headname" ></app-head-bar>
+
+<app-center-bar [centername] = "centername" [total]="total" (messageEvent)="reciveMessage($event)" ></app-center-bar>
+
+<app-foot-bar></app-foot-bar>
+
+</ng-template>
